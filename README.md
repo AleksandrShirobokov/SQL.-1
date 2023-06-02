@@ -10,11 +10,11 @@ WHERE district LIKE 'K%a' AND district NOT LIKE '% %';
 ```
 ## Задание 2
 **Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года включительно и стоимость которых превышает 10.00.**
-![Снимок экрана (221)](https://github.com/AleksandrShirobokov/SQL.-1/assets/69298696/a0a453ba-e853-4c12-a935-99921e8550f0)
+![Снимок экрана (226)](https://github.com/AleksandrShirobokov/SQL.-1/assets/69298696/8761930c-4785-4e44-a9ec-c8c7b9768ade)
 ```
 SELECT *
 FROM payment
-WHERE payment_date BETWEEN '2005-06-15' AND '2005-06-18'
+WHERE payment_date BETWEEN '2005-06-15 00:00:00' AND '2005-06-18 23:59:59'
   AND amount > 10.00;
 ```
 ## Задание 3
@@ -66,7 +66,7 @@ WHERE district LIKE 'K%a' AND district NOT LIKE '% %';
 /*Задание 2*/
 SELECT *
 FROM payment
-WHERE payment_date BETWEEN '2005-06-15' AND '2005-06-18'
+WHERE payment_date BETWEEN '2005-06-15 00:00:00' AND '2005-06-18 23:59:59'
   AND amount > 10.00;
 
 /*Задание 3*/ 
